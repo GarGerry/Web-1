@@ -160,18 +160,19 @@ section {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 60px; /* Menyesuaikan dengan tinggi navbar */
         right: 0;
         background: black;
-        width: 200px;
-        border-radius: 8px;
-        transform: translateY(-100%); /* Menyembunyikan menu */
-        transition: transform 0.5s ease-in-out; /* Efek animasi slide ke atas */
+        width: 100%; /* Menu sekarang membentang penuh dari kanan ke kiri */
+        height: auto;
+        transform: translateY(-100%); /* Menyembunyikan menu di atas layar */
+        transition: transform 0.5s ease-in-out; /* Efek animasi turun */
+        z-index: 1000;
     }
 
     .navigation.active ul {
         display: flex;
-        transform: translateY(0); /* Menampilkan menu */
+        transform: translateY(0); /* Menu turun ke bawah */
     }
 
     .menu-toggle.active {
@@ -180,6 +181,16 @@ section {
 
     .menu-toggle {
         display: block;
+    }
+
+    /* Tombol X untuk menutup menu */
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
     }
 }
 
