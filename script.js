@@ -81,4 +81,14 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    // Fungsi untuk menambahkan kelas "visible" pada section yang sudah terlihat
+    function addVisibleClassToSections() {
+        sections.forEach((section) => {
+            const sectionPosition = section.getBoundingClientRect();
+            if (sectionPosition.top < window.innerHeight && sectionPosition.bottom >= 0) {
+                section.classList.add('visible');
+            }
+        });
+    }
 });
