@@ -109,11 +109,11 @@ section {
 }
 
 .liquid-digital-assets {
-    background-color: #e0f7fa;
+    background-color: black;
 }
 
 .partners {
-    background-color: #f1f8e9;
+    background-color: black;
 }
 
 /* Bagian Portfolio Grid */
@@ -131,7 +131,7 @@ section {
 }
 
 .portfolio-item img {
-    max-width: 80px; /* Ukuran logo */
+    max-width: 70px; /* Ukuran logo */
     height: auto;
     margin-bottom: 10px; /* Jarak antara logo dan teks */
 }
