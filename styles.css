@@ -38,6 +38,7 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: white; /* Menambahkan warna untuk logo */
 }
 
 .navigation ul {
@@ -108,7 +109,11 @@ section {
     text-align: center;
 }
 
-.liquid-digital-assets, .partners {
+.liquid-digital-assets {
+    background-color: black;
+}
+
+.partners {
     background-color: black;
 }
 
