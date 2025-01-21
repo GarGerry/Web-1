@@ -116,6 +116,24 @@ section {
     background-color: #f1f8e9;
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.portfolio-logo {
+    max-width: 80px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-logo:hover {
+    transform: scale(1.1);
+}
+
 /* Bagian Portfolio Grid */
 .portfolio-grid {
     display: grid;
@@ -153,44 +171,6 @@ section {
 
     .portfolio-item p {
         font-size: 12px;
-    }
-
-    /* Mengubah menu menjadi hamburger pada layar kecil */
-    .navigation ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Menyesuaikan dengan tinggi navbar */
-        right: 0;
-        background: black;
-        width: 100%; /* Menu sekarang membentang penuh dari kanan ke kiri */
-        height: auto;
-        transform: translateY(-100%); /* Menyembunyikan menu di atas layar */
-        transition: transform 0.5s ease-in-out; /* Efek animasi turun */
-        z-index: 1000;
-    }
-
-    .navigation.active ul {
-        display: flex;
-        transform: translateY(0); /* Menu turun ke bawah */
-    }
-
-    .menu-toggle.active {
-        color: white;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Tombol X untuk menutup menu */
-    .close-btn {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
     }
 }
 
@@ -350,5 +330,4 @@ section {
     border-top: 1px solid white;
     position: relative; /* Agar footer tetap di bawah dan tidak ikut slide */
     margin-top: 20px; /* Menambahkan margin agar tidak terlalu rapat dengan konten */
-  }
-      
+}
