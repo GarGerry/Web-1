@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.header');
     const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.navigation ul');
-    
+    const navigation = document.querySelector('.navigation');
+
     // Menambahkan kelas "scrolled" saat scroll
     window.addEventListener('scroll', function() {
         if (window.scrollY > 0) {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navbar.classList.remove('scrolled');
         }
     });
-    
+
     const sections = document.querySelectorAll('.section');
     let currentIndex = 0;
     const totalSections = sections.length;
@@ -84,10 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Menu toggle (responsive) untuk tampilan mobile
+    // Toggle menu responsif
     menuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active');
+        menuToggle.classList.toggle('active');  // Menambah/ menghapus efek toggle pada icon
     });
-
 });
