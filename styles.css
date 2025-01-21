@@ -131,7 +131,7 @@ section {
 }
 
 .portfolio-item img {
-    max-width: 70px; /* Ukuran logo */
+    max-width: 50px; /* Ukuran logo */
     height: auto;
     margin-bottom: 10px; /* Jarak antara logo dan teks */
 }
