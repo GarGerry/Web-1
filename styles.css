@@ -6,21 +6,22 @@
 
 html, body {
     height: 100%;
-    overflow: hidden; /* Menonaktifkan overflow di body */
-    scroll-behavior: smooth; /* Untuk scroll yang lebih halus */
+    overflow-x: hidden; /* Menghindari scroll horizontal */
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: black;
+    background-color: black;
     color: white;
     line-height: 1.6;
+    overflow-y: scroll;
 }
 
 .scroll-container {
     height: 100%;
-    overflow-y: scroll; /* Mengaktifkan scroll vertikal */
-    scroll-snap-type: y mandatory; /* Snap scroll secara vertikal */
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 header {
@@ -30,15 +31,18 @@ header {
     padding: 20px;
     background: black;
     border-bottom: 1px solid white;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
+    width: 100%;
+    box-sizing: border-box; /* Pastikan header tidak melampaui batas */
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: white; /* Menambahkan warna untuk logo */
 }
 
 .navigation ul {
@@ -59,7 +63,7 @@ header {
 
 .navigation ul li a:hover {
     color: grey;
-    transform: scale(1.05); /* Efek zoom pada link saat hover */
+    transform: scale(1.05);
 }
 
 .menu-toggle {
@@ -73,9 +77,11 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh; /* Setiap section mengambil penuh layar */
-    scroll-snap-align: start; /* Memastikan halaman berhenti di awal */
+    height: 100vh;
+    scroll-snap-align: start;
     flex-direction: column;
+    padding-top: 80px; /* Menghindari konten tertutup navbar fixed */
+    width: 100%;
 }
 
 .section-content {
@@ -135,24 +141,22 @@ section {
     transform: scale(1.1);
 }
 
-/* Bagian Portfolio Grid */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsif grid */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
     justify-items: center;
     align-items: center;
 }
 
-/* Item dalam Portfolio */
 .portfolio-item {
     text-align: center;
 }
 
 .portfolio-item img {
-    max-width: 80px; /* Ukuran logo */
+    max-width: 80px;
     height: auto;
-    margin-bottom: 10px; /* Jarak antara logo dan teks */
+    margin-bottom: 10px;
 }
 
 .portfolio-item p {
@@ -160,10 +164,9 @@ section {
     color: white;
 }
 
-/* Responsif untuk grid */
 @media (max-width: 768px) {
     .portfolio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ukuran lebih kecil untuk perangkat kecil */
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 
     .portfolio-item img {
@@ -175,7 +178,6 @@ section {
     }
 }
 
-/* Kartu proyek */
 .project-container {
     display: flex;
     justify-content: center;
@@ -192,7 +194,7 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     padding: 20px;
-    width: 300px; /* Ukuran tetap untuk kartu */
+    width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -236,7 +238,6 @@ section {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsif untuk kartu proyek */
 @media (max-width: 768px) {
     .portfolio {
         grid-template-columns: 1fr;
@@ -248,7 +249,7 @@ section {
     }
 
     .project-card {
-        width: 90%; /* Lebar kartu menyesuaikan layar kecil */
+        width: 90%;
     }
 
     .section {
@@ -264,7 +265,6 @@ section {
     }
 }
 
-/* Animasi Fade In */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -274,7 +274,6 @@ section {
     }
 }
 
-/* Animasi Slide In dari bawah */
 @keyframes slideInUp {
     0% {
         opacity: 0;
@@ -286,7 +285,6 @@ section {
     }
 }
 
-/* Animasi Zoom In */
 @keyframes zoomIn {
     0% {
         opacity: 0;
@@ -298,7 +296,6 @@ section {
     }
 }
 
-/* Applying different animations to each section */
 #Home {
     animation: fadeIn 1s ease-in-out forwards;
 }
@@ -311,10 +308,9 @@ section {
     animation: zoomIn 1s ease-in-out forwards;
 }
 
-/* Apply fade-in when the section is in view */
 .section {
-    opacity: 0; /* Mulai dengan transparan */
-    transform: translateY(50px); /* Posisi awal */
+    opacity: 0;
+    transform: translateY(50px);
     transition: opacity 1s, transform 1s;
 }
 
@@ -323,12 +319,84 @@ section {
     transform: translateY(0);
 }
 
-/* Mengatur agar footer tidak ikut bergulir dengan konten */
 .footer {
     text-align: center;
     padding: 20px;
     background: black;
     border-top: 1px solid white;
-    position: relative; /* Agar footer tetap di bawah dan tidak ikut slide */
-    margin-top: 20px; /* Menambahkan margin agar tidak terlalu rapat dengan konten */
+    position: relative;
+    margin-top: 20px;
 }
+
+#Profile {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #121212;
+}
+
+.profile-card {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #00c6ff;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.role {
+    font-size: 14px;
+    color: gray;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.bio {
+    font-size: 14px;
+    color: lightgray;
+    margin: 10px 0;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.tag {
+    background-color: #2a2a2a;
