@@ -110,6 +110,23 @@ section {
     color: black;
 }
 
+/* Portfolio - Mengatur Ukuran Logo */
+.portfolio .portfolio-logo {
+    width: 50px;  /* Ukuran tetap */
+    height: 50px;
+    object-fit: contain;
+    margin: 10px;
+}
+
+/* Layout Logo Agar Rapi */
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 /* Profile Section */
 .profile-card {
     background: white;
@@ -146,6 +163,14 @@ section {
     color: black;
 }
 
+/* Profile - Mengatur Ukuran Ikon */
+.profile-card .icons img {
+    width: 35px; /* Ukuran lebih kecil untuk ikon dalam Profile */
+    height: 35px;
+    object-fit: contain;
+    margin: 5px;
+}
+
 /* Footer */
 .footer {
     background: #333;
@@ -180,17 +205,4 @@ section {
         flex-direction: column;
         align-items: center;
     }
-}
-/* Logo dalam Portfolio */
-.portfolio-logo {
-    width: 60px; /* Ukuran tetap */
-    height: auto;
-    margin: 10px;
-}
-
-/* Logo dalam Profile */
-.icons img {
-    width: 40px; /* Ukuran lebih kecil untuk profil */
-    height: auto;
-    margin: 5px;
 }
