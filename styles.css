@@ -319,15 +319,6 @@ section {
     transform: translateY(0);
 }
 
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: black;
-    border-top: 1px solid white;
-    position: relative;
-    margin-top: 20px;
-}
-
 #Profile {
     text-align: center;
     padding: 50px 20px;
@@ -346,8 +337,8 @@ section {
 }
 
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     border: 3px solid #00c6ff;
     margin-bottom: 10px;
@@ -400,3 +391,13 @@ section {
 
 .tag {
     background-color: #2a2a2a;
+    
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    border-top: 1px solid white;
+    position: relative;
+    margin-top: 20px;
+}
