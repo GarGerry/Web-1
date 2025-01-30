@@ -181,3 +181,16 @@ section {
         align-items: center;
     }
 }
+/* Logo dalam Portfolio */
+.portfolio-logo {
+    width: 60px; /* Ukuran tetap */
+    height: auto;
+    margin: 10px;
+}
+
+/* Logo dalam Profile */
+.icons img {
+    width: 40px; /* Ukuran lebih kecil untuk profil */
+    height: auto;
+    margin: 5px;
+}
