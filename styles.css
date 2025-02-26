@@ -1,8 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
+    color: #333;
 }
 
 .container {
@@ -24,26 +25,40 @@ body {
     width: 55%;
 }
 
+h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
 label {
     display: block;
     margin-top: 10px;
+    font-weight: 400;
 }
 
 input, select, button {
+    font-family: 'Poppins', sans-serif;
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 14px;
 }
 
 button {
     background: #28a745;
     color: white;
+    font-weight: 600;
     cursor: pointer;
     margin-top: 15px;
+    border: none;
 }
 
 button:hover {
     background: #218838;
+}
+
+h2 span {
+    color: #28a745;
 }
