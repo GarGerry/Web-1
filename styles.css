@@ -1,64 +1,17 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-    color: #333;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 900px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.investment-form {
-    width: 40%;
-}
-
-.chart-container {
-    width: 55%;
-}
-
-h2 {
-    font-weight: 600;
-    margin-bottom: 15px;
 }
 
 label {
-    display: block;
+    font-weight: 500;
     margin-top: 10px;
-    font-weight: 400;
 }
 
-input, select, button {
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+input, select {
     font-size: 14px;
 }
 
-button {
-    background: #28a745;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 15px;
-    border: none;
-}
-
-button:hover {
-    background: #218838;
-}
-
-h2 span {
-    color: #28a745;
+h4 {
+    color: #333;
 }
